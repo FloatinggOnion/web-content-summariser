@@ -4,6 +4,7 @@ from selenium.webdriver.chromium.remote_connection import ChromiumRemoteConnecti
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
+import requests
 import os
 
 load_dotenv()
@@ -42,6 +43,11 @@ def scrape_website(website):
         return html
     finally:
         driver.quit()
+        
+def scrape_website(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    return soup.prettify()
 
 
 def extract_body_content(html_content):
