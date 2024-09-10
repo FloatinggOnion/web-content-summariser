@@ -16,6 +16,10 @@ def scrape_website(website):
     # sbr_connection = ChromiumRemoteConnection(SBR_WEBDRIVER, "goog", "chrome")
     
     options = ChromeOptions()
+    options = ChromeOptions()
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
     driver = Chrome(service=Service(ChromeDriverManager().install()), options=options)
     # with Remote(sbr_connection, options=ChromeOptions()) as driver:
     #     driver.get(website)
