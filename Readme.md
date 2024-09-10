@@ -24,7 +24,7 @@ streamlit run main.py
 __PS__: Don't forget to add your Google Gemini API key in a `.env` file, using the format specified in `.env.example`
 
 ### Deployment
-This application is deployed on Streamlit Community Cloud. You can access it [here](https://webpagesummariser.streamlit.app/).
+This application is deployed on Streamlit Community Cloud. You can access it [here](https://web-content-summariser.streamlit.app/).
 
 ### Future Work
 - Add more features to the application, such as the ability to summarise multiple webpages at once, and the ability to save summaries for later reference.
