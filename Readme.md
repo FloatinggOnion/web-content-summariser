@@ -1,5 +1,5 @@
 # AI Webpage Summariser
-Author: Jesse-Paul Miracle Osemeke
+*__Author: Jesse-Paul Miracle Osemeke__*
 
 ### About
 This project is a Streamlit application that takes in the url of any webpage, scrapes the content, and summarises it. It uses the Google Gemini API to perform the summarisation, and the BeautifulSoup library to scrape the webpage. The application is deployed on Streamlit Community Cloud.
@@ -9,7 +9,6 @@ This project is a Streamlit application that takes in the url of any webpage, sc
 - Streamlit
 - BeautifulSoup
 - Google Gemini API
-- Langchain
 - Selenium
 
 ### Testing / Running
@@ -21,7 +20,7 @@ Once the dependencies are installed, you can run the application using the follo
 ```shell
 streamlit run main.py
 ```
-__PS__: Don't forget to add your Google Gemini API key in a `.env` file, using the format specified in `.env.example`
+*__PS__*: Don't forget to add your Google Gemini API key in a `.env` file, using the format specified in `.env.example`
 
 ### Deployment
 This application is deployed on Streamlit Community Cloud. You can access it [here](https://web-content-summariser.streamlit.app/).

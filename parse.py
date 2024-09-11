@@ -1,4 +1,3 @@
-from langchain_core.prompts import ChatPromptTemplate
 import google.generativeai as genai
 
 from dotenv import load_dotenv
@@ -31,7 +30,6 @@ def parse_with_gemini(dom_chunks):
         dom_content="\n".join(i for i in dom_chunks)
     )
     model = genai.GenerativeModel('gemini-1.5-flash')
-    # chain = prompt | model
     
     response = model.generate_content(prompt)
 

@@ -1,20 +1,15 @@
-from selenium.webdriver import Remote, ChromeOptions, Chrome
+from selenium.webdriver import ChromeOptions, Chrome
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chromium.remote_connection import ChromiumRemoteConnection
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 import requests
-import os
 
 load_dotenv()
-
-# SBR_WEBDRIVER = os.getenv("SBR_WEBDRIVER")
 
 
 def scrape_website(website):
     print("Connecting to Scraping Browser...")
-    # sbr_connection = ChromiumRemoteConnection(SBR_WEBDRIVER, "goog", "chrome")
     
     options = ChromeOptions()
     options = ChromeOptions()
@@ -22,20 +17,6 @@ def scrape_website(website):
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     driver = Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    # with Remote(sbr_connection, options=ChromeOptions()) as driver:
-    #     driver.get(website)
-    #     print("Waiting captcha to solve...")
-    #     solve_res = driver.execute(
-    #         "executeCdpCommand",
-    #         {
-    #             "cmd": "Captcha.waitForSolve",
-    #             "params": {"detectTimeout": 10000},
-    #         },
-    #     )
-    #     print("Captcha solve status:", solve_res["value"]["status"])
-    #     print("Navigated! Scraping page content...")
-    #     html = driver.page_source
-    #     return html
     
     try:
         driver.get(website)

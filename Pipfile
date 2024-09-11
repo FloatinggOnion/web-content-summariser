@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 streamlit = "*"
-langchain-community = "*"
 selenium = "*"
 beautifulsoup4 = "*"
 html5lib = "*"

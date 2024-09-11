@@ -8,6 +8,7 @@ from scrape import (
 from parse import parse_with_gemini
 
 st.title("Web Page Summarizer")
+st.header("Author: Jesse-Paul Miracle Osemeke")
 st.write("Uses AI and web scraping techniques to summarize the contents of any webpage")
 
 url = st.text_input(label="Website URL")
